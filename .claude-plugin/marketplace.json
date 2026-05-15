@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "welgo-cfo-plugin",
-      "source": ".",
+      "source": "./plugins/welgo-cfo-plugin",
       "description": "Welgo CFO/Bookkeeper plugin for Angela Ganuelas"
     }
   ]
