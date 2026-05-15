@@ -1,0 +1,15 @@
+{
+  "name": "welgo-cfo",
+  "owner": {
+    "name": "Ed Gomberg",
+    "email": "edgomberg@gmail.com"
+  },
+  "description": "Welgo CFO/Bookkeeper plugin for Angela Ganuelas",
+  "plugins": [
+    {
+      "name": "welgo-cfo-plugin",
+      "source": ".",
+      "description": "Welgo CFO/Bookkeeper plugin for Angela Ganuelas"
+    }
+  ]
+}
