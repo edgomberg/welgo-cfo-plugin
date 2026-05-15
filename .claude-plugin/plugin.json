@@ -1,0 +1,7 @@
+{
+  "name": "welgo-cfo-plugin",
+  "version": "0.1.0",
+  "description": "Welgo CFO/Bookkeeper plugin. QBO categorization, bookkeeper review flow, financial delegation routing, Welgo Brain MCP. For Angela Ganuelas.",
+  "author": "Ed Gomberg",
+  "license": "Private"
+}
