@@ -4,12 +4,12 @@
     "name": "Ed Gomberg",
     "email": "edgomberg@gmail.com"
   },
-  "description": "Welgo CFO/Bookkeeper plugin for Angela Ganuelas",
+  "description": "Welgo CFO plugin for Angela Ganuelas (v0.2 CFO elevation 2026-05-19)",
   "plugins": [
     {
       "name": "welgo-cfo-plugin",
       "source": "./plugins/welgo-cfo-plugin",
-      "description": "Welgo CFO/Bookkeeper plugin for Angela Ganuelas"
+      "description": "Welgo CFO plugin: scope docs (CFO + COO cross-ref), rules, skills, Welgo Brain MCP, hooks. Tailnet-identity auth."
     }
   ]
 }
