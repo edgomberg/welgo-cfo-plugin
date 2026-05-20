@@ -1,8 +1,6 @@
 #!/bin/bash
-# Idempotent installer for the Welgo Brain remote MCP wrapper.
+# Idempotent installer for the Welgo Brain remote MCP wrapper + ~/welgo/.env scaffold.
 # Runs at Claude Code session start (per hooks.json).
-# - Downloads the wrapper script if missing.
-# - Creates ~/welgo/.env scaffold if missing so the operator can paste their bearer token.
 set -uo pipefail
 
 mkdir -p "$HOME/welgo"
@@ -16,13 +14,18 @@ fi
 ENV_FILE="$HOME/welgo/.env"
 if [ ! -f "$ENV_FILE" ]; then
   cat >"$ENV_FILE" <<'EOF'
-# Welgo Brain MCP credentials for this operator.
-# Two auth paths (Brain accepts either):
+# Welgo Brain MCP credentials + identity for this operator.
+#
+# OPERATOR field (REQUIRED): your operator slug as recognized by Welgo Brain.
+#   Valid slugs: ed | angela | sese | tom | jes | ron | patriciad | benjamin | yna
+# Ed tells you which slug is yours when he sends your token.
+OPERATOR=angela
+#
+# Two auth paths to Brain (server accepts either):
 #   1. Tailscale identity (preferred). If your Mac is signed into Ed's tailnet
-#      AND mac-mini-brain.tail59326c.ts.net resolves, NO token is needed — the
-#      Welgo Brain server reads your tailnet identity from the proxy header.
+#      AND mac-mini-brain.tail59326c.ts.net resolves, NO token is needed.
 #   2. Bearer token (fallback for off-tailnet OR while Tailscale install pending).
-#      Ed sends your personal MCP_BEARER_TOKEN privately. Uncomment and paste below.
+#      Ed sends your personal MCP_BEARER_TOKEN privately. Uncomment + paste.
 # WELGO_BRAIN_URL=https://mac-mini-brain.tail59326c.ts.net
 # MCP_BEARER_TOKEN=paste-your-token-here-from-Ed
 EOF
