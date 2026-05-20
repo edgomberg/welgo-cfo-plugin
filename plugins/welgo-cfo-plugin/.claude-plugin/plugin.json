@@ -1,7 +1,7 @@
 {
   "name": "welgo-cfo-plugin",
-  "version": "0.2.0",
-  "description": "Welgo CFO plugin for Angela Ganuelas — scope docs (CFO + COO cross-ref), rules, skills, Welgo Brain MCP, hooks. Tailnet-identity auth, no bearer token.",
+  "version": "0.3.0",
+  "description": "Welgo CFO plugin for Angela Ganuelas — scope docs (CFO + COO cross-ref), rules, skills, Welgo Brain MCP, hooks. Dual auth: tailnet identity preferred, per-operator bearer fallback via ~/welgo/.env.",
   "author": {
     "name": "Ed Gomberg",
     "email": "edgomberg@gmail.com"

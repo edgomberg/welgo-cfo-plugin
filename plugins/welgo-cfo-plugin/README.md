@@ -9,10 +9,15 @@ Bundles everything you need to run the CFO function inside Claude Code: scope do
 ## Prereqs (one-time per machine)
 
 1. **Claude Code installed.** Free: https://claude.com/claude-code
-2. **Tailscale installed and signed in** with your Google account (`lala.ganuelas@gmail.com`). Ed sends the tailnet invite.
-3. **You appear on Ed's tailnet** as a member (not pending). Verify in Tailscale app menu.
+2. **Tailscale installed and signed in** with your Google account (`lala.ganuelas@gmail.com`). Ed sends the tailnet invite. Accept it. Open the Tailscale app on your Mac.
+3. **Your machine appears on Ed's tailnet** as a connected node (Ed verifies this from his side via `tailscale status`).
 
-That's it. No bearer token. No 1Password vault grant. The Welgo Brain server validates your tailnet identity directly.
+The Welgo Brain server has two auth paths:
+
+- **Path A (preferred): tailnet identity.** If your Mac is signed into Ed's tailnet AND `mac-mini-brain.tail59326c.ts.net` resolves on your machine, no token is needed. The server reads your tailnet identity from the proxy header.
+- **Path B (fallback): per-operator bearer token.** If you are off-tailnet (e.g., Tailscale install pending OR travel without VPN), Ed sends you a personal bearer token via secure channel. Paste it into `~/welgo/.env` (the plugin creates this file at session-start as a scaffold).
+
+The plugin handles both paths automatically. You do not pick.
 
 ## Install
 
