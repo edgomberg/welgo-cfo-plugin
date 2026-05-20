@@ -1,7 +1,7 @@
 {
   "name": "welgo-cfo-plugin",
-  "version": "0.1.0",
-  "description": "Welgo CFO/Bookkeeper plugin for Angela Ganuelas",
+  "version": "0.2.0",
+  "description": "Welgo CFO plugin for Angela Ganuelas — scope docs (CFO + COO cross-ref), rules, skills, Welgo Brain MCP, hooks. Tailnet-identity auth, no bearer token.",
   "author": {
     "name": "Ed Gomberg",
     "email": "edgomberg@gmail.com"
